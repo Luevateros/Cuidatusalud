@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewUserFragment">
+
+    <!-- Linea central horizontal -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/centro_horizontal"/>
+
+    <!-- Linea central vertical -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:id="@+id/centro_vertical"/>
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_above="@id/centro_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="200dp"
+        android:id="@+id/principal"
+        >
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo"
+            android:id="@+id/logo"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/forma"
+        android:layout_width="320dp"
+        android:layout_height="350dp"
+        android:layout_above="@id/botonregistro"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:inputType="textPersonName"
+            android:hint="Nombre"
+            android:id="@+id/nombre"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/nombre"
+            android:layout_marginTop="5dp"
+            android:inputType="textEmailAddress"
+            android:hint="Correo"
+            android:id="@+id/correo"
+            />
+
+        <RadioGroup
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/correo"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:id="@+id/sexo"
+            >
+            <RadioButton
+                android:id="@+id/mujer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#555"
+                android:text="Mujer"
+                />
+            <RadioButton
+                android:id="@+id/hombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:textSize="18sp"
+                android:textColor="#555"
+                android:text="Hombre"
+                />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/sexo"
+            android:layout_marginTop="5dp"
+            android:id="@+id/edad_altura"
+            >
+            <EditText
+                android:id="@+id/edad"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="Edad"
+                />
+            <EditText
+                android:id="@+id/altura"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:inputType="numberDecimal"
+                android:hint="Altura (cm)"
+                />
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/edad_altura"
+            android:layout_marginTop="5dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:id="@+id/password"
+            />
+
+        <EditText
+            android:id="@+id/password2"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/password"
+            android:layout_marginTop="5dp"
+            android:hint="Repite la contraseña"
+            android:inputType="textPassword"
+            />
+
+    </RelativeLayout>
+
+    <!-- Registrarse -->
+    <android.widget.Button
+        android:id="@+id/botonregistro"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/botonsesion"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bckgsecundario"
+        android:text="Crear cuenta"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:textSize="24sp" />
+
+    <!-- Iniciar sesión -->
+    <android.widget.Button
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bckgprimario"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:text="¿Ya tienes cuenta?"
+        android:id="@+id/botonsesion"
+        />
+
+</RelativeLayout>

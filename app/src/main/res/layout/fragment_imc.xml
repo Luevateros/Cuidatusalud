@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImcFragment">
+
+    <!-- Linea central horizontal -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/centrohorizontal"/>
+
+    <!-- Linea central vertical -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:id="@+id/centrovertical"/>
+
+    <!-- Selecciona peso -->
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/ingresarpeso">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:text="Selecciona tu peso"
+            android:id="@+id/selecc_peso"
+            />
+
+        <TextView
+            android:id="@+id/pesoactual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selecc_peso"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:text="68.9"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="35dp"
+            android:layout_below="@+id/selecc_peso"
+            android:layout_toEndOf="@+id/pesoactual"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:text="kg"
+            />
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pesoactual"
+            android:layout_marginTop="30dp"
+            android:thumbTint="#FF8650"
+            android:progressTint="#36A9E1"
+            android:id="@+id/seekbarpeso"
+            />
+    </RelativeLayout>
+
+    <!-- Resultado -->
+    <RelativeLayout
+        android:id="@+id/resultado"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/ingresarpeso"
+        android:layout_centerHorizontal="true"
+        >
+    </RelativeLayout>
+
+    <!-- Calcular IMC -->
+    <android.widget.Button
+        android:id="@+id/calcula"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bckgprimario"
+        android:text="Calcular IMC"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+
+
+</RelativeLayout>

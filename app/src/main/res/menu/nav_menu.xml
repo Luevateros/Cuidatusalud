@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    tools:ignore="HardcodedText">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/nav_inicio"
+            android:title="Portada"/>
+        <item
+            android:id="@+id/nav_config"
+            android:icon="@drawable/nav_config"
+            android:title="Iniciar sesión"/>
+        <item
+            android:id="@+id/nav_nosotros"
+            android:icon="@drawable/nav_nosotros"
+            android:title="Nuevo usuario"/>
+        <item
+            android:id="@+id/nav_compartir"
+            android:icon="@drawable/nav_compartir"
+            android:title="Índice de masa corporal (IMC)"/>
+
+    </group>
+
+    <item
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_salir"
+                android:icon="@drawable/nav_salir"
+                android:title="Salir"/>
+                />
+        </menu>
+        </item>
+
+</menu>
